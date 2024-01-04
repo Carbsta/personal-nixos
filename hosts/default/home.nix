@@ -37,7 +37,8 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    pkgs.discord  
+    pkgs.discord
+    pkgs.r2modman  
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
