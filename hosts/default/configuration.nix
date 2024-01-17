@@ -115,13 +115,7 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
-    emacs
     git
-    # dependencies for doom emacs
-    ripgrep
-    coreutils
-    fd
-    clang
   ];
   
   # set zsh as default shell  
