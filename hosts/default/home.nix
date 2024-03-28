@@ -18,6 +18,23 @@
   # Enable unfree packages
   nixpkgs.config.allowUnfree = true; 
 
+  # neovim
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true; 
+    extraConfig = ''
+      set number relativenumber
+      set clipboard+=unnamedplus
+    '';
+  };
+
+  programs.vscode = {
+   enable = true;
+  };
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
@@ -38,7 +55,8 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     pkgs.discord
-    pkgs.r2modman  
+    pkgs.r2modman
+    pkgs.cockatrice
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
